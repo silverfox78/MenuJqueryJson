@@ -8,11 +8,11 @@ var Menu = {
                     $.each(data.menu,
                         function(i, item) {
                             window.console && console.log(item);
-                            items.push("<li><a href=" + item[1] + ">" + item[0] + "</a></li>");
+                            itemsMenu.push("<li><a href=" + item[1] + ">" + item[0] + "</a></li>");
                         }
                     );
 
-                    var menuFinal = items.join("");
+                    var menuFinal = itemsMenu.join("");
                     window.console && console.log(menuFinal);
                     $("#MenuDinamico").html(menuFinal);
                 }
