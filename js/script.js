@@ -1,5 +1,7 @@
 var Menu = {
     LeerOpciones: function() {
+        Mensajeria.CargardoInicio();
+
         try {
             $.getJSON('data/data.json', function(data) {
                 if (data.estado) {
@@ -7,8 +9,9 @@ var Menu = {
                     var itemsMenu = [];
                     $.each(data.menu,
                         function(i, item) {
-                            window.console && console.log(item);
-                            itemsMenu.push("<li><a href=" + item[1] + ">" + item[0] + "</a></li>");
+                            var obj = $.parseJSON(item);
+                            window.console && console.log(obj);
+                            itemsMenu.push("<li><a href=" + obj[1] + ">" + obj[0] + "</a></li>");
                         }
                     );
 
@@ -16,16 +19,6 @@ var Menu = {
                     window.console && console.log(menuFinal);
                     $("#MenuDinamico").html(menuFinal);
                 }
-
-                /*var items = [];
-                $.each(data, function(key, val) {
-                    
-                });
-
-                $("<ul/>", {
-                    "class": "my-new-list",
-                    html: items.join("")
-                }).appendTo("body");*/
             });
 
         } catch (e) {
@@ -35,6 +28,7 @@ var Menu = {
             Error.Alerta(mensajeError, mensajeInterno, false);
         }
 
+        Mensajeria.CargardoFin();
         return false;
     }
 }
