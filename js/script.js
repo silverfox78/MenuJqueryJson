@@ -9,7 +9,7 @@ var Menu = {
                     var itemsMenu = [];
                     $.each(data.menu,
                         function(key, val) {
-                            itemsMenu.push("<li><a href=" + val + ">" + key + "</a></li>");
+                            itemsMenu.push("<li><a href=" + val[key].pagina + ">" + val[key].opcion + "</a></li>");
                         }
                     );
 

@@ -2,12 +2,12 @@
     "estado": true,
     "mensaje": "ok",
     "menu": [
-        { "opcion 1": "index.html" },
-        { "opcion 2": "index.html" },
-        { "opcion 3": "index.html" },
-        { "opcion 4": "index.html" },
-        { "opcion 5": "index.html" },
-        { "opcion 6": "index.html" },
-        { "opcion 7": "index.html" }
+        { "opcion" : "opcion 1", "pagina" : "index.html" },
+        { "opcion" : "opcion 2", "pagina" : "index.html" },
+        { "opcion" : "opcion 3", "pagina" : "index.html" },
+        { "opcion" : "opcion 4", "pagina" : "index.html" },
+        { "opcion" : "opcion 5", "pagina" : "index.html" },
+        { "opcion" : "opcion 6", "pagina" : "index.html" },
+        { "opcion" : "opcion 7", "pagina" : "index.html" }
     ]
 }
