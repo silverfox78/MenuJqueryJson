@@ -8,10 +8,8 @@ var Menu = {
 
                     var itemsMenu = [];
                     $.each(data.menu,
-                        function(i, item) {
-                            var obj = $.parseJSON(item);
-                            window.console && console.log(obj);
-                            itemsMenu.push("<li><a href=" + obj[1] + ">" + obj[0] + "</a></li>");
+                        function(key, val) {
+                            itemsMenu.push("<li><a href=" + val + ">" + key + "</a></li>");
                         }
                     );
 
