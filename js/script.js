@@ -2,7 +2,15 @@ var Menu = {
     LeerOpciones: function() {
         try {
             $.getJSON('data/data.json', function(data) {
-                var items = [];
+                if (data.estado) {
+                    $.each(data.menu,
+                        function(i, item) {
+                            window.console && console.log(item);
+                        }
+                    );
+                }
+
+                /*var items = [];
                 $.each(data, function(key, val) {
                     items.push("<li id='" + key + "'>" + val + "</li>");
                 });
@@ -10,7 +18,7 @@ var Menu = {
                 $("<ul/>", {
                     "class": "my-new-list",
                     html: items.join("")
-                }).appendTo("body");
+                }).appendTo("body");*/
             });
 
         } catch (e) {
