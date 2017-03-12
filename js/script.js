@@ -12,7 +12,9 @@ var Menu = {
                         }
                     );
 
-                    $("#MenuDinamico").html(items.join(""));
+                    var menuFinal = items.join("");
+                    window.console && console.log(menuFinal);
+                    $("#MenuDinamico").html(menuFinal);
                 }
 
                 /*var items = [];
