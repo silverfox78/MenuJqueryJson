@@ -3,16 +3,21 @@ var Menu = {
         try {
             $.getJSON('data/data.json', function(data) {
                 if (data.estado) {
+
+                    var itemsMenu = [];
                     $.each(data.menu,
                         function(i, item) {
                             window.console && console.log(item);
+                            items.push("<li><a href=" + item[1] + ">" + item[0] + "</a></li>");
                         }
                     );
+
+                    $("#MenuDinamico").html(items.join(""));
                 }
 
                 /*var items = [];
                 $.each(data, function(key, val) {
-                    items.push("<li id='" + key + "'>" + val + "</li>");
+                    
                 });
 
                 $("<ul/>", {
