@@ -9,13 +9,11 @@ var Menu = {
                     var itemsMenu = [];
                     $.each(data.menu,
                         function(key, val) {
-                            itemsMenu.push("<li><a href=" + val[key].pagina + ">" + val[key].opcion + "</a></li>");
+                            itemsMenu.push("<li><a href=" + val.pagina + ">" + val.opcion + "</a></li>");
                         }
                     );
 
-                    var menuFinal = itemsMenu.join("");
-                    window.console && console.log(menuFinal);
-                    $("#MenuDinamico").html(menuFinal);
+                    $("#MenuDinamico").html(itemsMenu.join(""));
                 }
             });
 
