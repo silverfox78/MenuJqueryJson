@@ -3,7 +3,7 @@ var Menu = {
         try {
             WebService.Consumir(
                 'data/data.json',
-                '',
+                '{}',
                 function() { Mensajeria.CargardoInicio(); },
                 function(data) {
                     var obj = data; //$.parseJSON(data.d);
